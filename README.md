@@ -1,28 +1,66 @@
-# React + TypeScript + Vite
+# Pablo Barbero Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend Developer Portfolio showcasing skills, projects, and experience. This portfolio is built using React, TypeScript, and modern web technologies.
 
-Currently, two official plugins are available:
+You can check out the live version of my portfolio here:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Live Demo](https://barberopablo.github.io/portfolio/)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Interactive and responsive design
+- Smooth animations and transitions using Framer Motion
+- Dark mode support
+- Skills displayed with hover effects
+- Showcase of real-world projects and GitHub repositories
+- Contact form for reaching out
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
+
+- React: JavaScript library for building user interfaces
+- TypeScript: Typed JavaScript to improve code quality and reliability
+- Framer Motion: Animation library to add smooth transitions
+- Tailwind CSS: Utility-first CSS framework for rapid UI development
+- Vite: Lightning-fast build tool for modern web projects
+
+## If you enjoyed the design, feel free to clone it and customize it to suit your project's needs!
+
+### Clone the repository
 
 ```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+git clone https://github.com/BarberoPablo/portfolio.git
+```
+
+### Navigate to the project
+
+```js
+cd portfolio
+```
+
+### Install dependecies
+
+```js
+npm install
+```
+
+### Run project
+
+```js
+npm run dev
+```
+
+The project will be available at http://localhost:5173/
+
+### Install dependecies
+
+```js
+npm install
+```
+
+### Install dependecies
+
+```js
+npm install
 ```
 
 - Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
@@ -31,11 +69,11 @@ export default tseslint.config({
 
 ```js
 // eslint.config.js
-import react from 'eslint-plugin-react'
+import react from "eslint-plugin-react";
 
 export default tseslint.config({
   // Set the react version
-  settings: { react: { version: '18.3' } },
+  settings: { react: { version: "18.3" } },
   plugins: {
     // Add the react plugin
     react,
@@ -44,7 +82,7 @@ export default tseslint.config({
     // other rules...
     // Enable its recommended rules
     ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
+    ...react.configs["jsx-runtime"].rules,
   },
-})
+});
 ```
