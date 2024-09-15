@@ -3,7 +3,7 @@ import { containerVariants, itemVariants, skills } from "../../utils";
 
 export default function Skills({ darkMode }: { darkMode: boolean }) {
   return (
-    <motion.section variants={itemVariants}>
+    <motion.section id="skills" variants={itemVariants}>
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Skills
       </motion.h3>

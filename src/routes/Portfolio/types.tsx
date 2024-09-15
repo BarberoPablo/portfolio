@@ -6,3 +6,11 @@ export type Project = {
   deployedUrl: string;
   details: string;
 };
+
+export type Experience = {
+  title: string;
+  url: string;
+  company: string;
+  location: string;
+  description: string[];
+};

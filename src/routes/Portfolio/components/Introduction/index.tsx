@@ -4,7 +4,7 @@ import { Gamepad, Github, Heart, Linkedin, Mail, ShoppingCart } from "lucide-rea
 
 export default function Introduction() {
   return (
-    <motion.section variants={itemVariants} className="mb-12 flex flex-col md:flex-row items-center">
+    <motion.section id="about" variants={itemVariants} className="mb-12 flex flex-col md:flex-row items-center">
       <motion.img
         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile%20image-saBrGBiM3zYiNZwxPBFCzlJix5ienE.png"
         alt="Pablo Barbero"
