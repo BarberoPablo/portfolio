@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Menu, Moon, Sun } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Experience from "./components/Experience";
 import Introduction from "./components/Introduction";
 import ProjectModal from "./components/ProjectModal";
@@ -11,9 +11,25 @@ import { containerVariants, headerMenu, itemVariants } from "./utils";
 import Education from "./components/Education";
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState("dark");
+  const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") || "dark");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark" || theme === "light") {
+      setDarkMode(theme);
+    } else {
+      setDarkMode("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  }, []);
+
+  const handleDarkMode = () => {
+    const newDarkMode = darkMode === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", newDarkMode);
+    setDarkMode(newDarkMode);
+  };
 
   return (
     <motion.div
@@ -22,7 +38,7 @@ export default function Portfolio() {
       variants={containerVariants}
       className={`${darkMode} min-h-screen bg-background text-font-color`}
     >
-      <header className={`sticky top-0 bg-gray-background text-white shadow-lg`}>
+      <header className={`sticky z-10 top-0 bg-gray-background text-white shadow-lg`}>
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <nav>
@@ -50,7 +66,7 @@ export default function Portfolio() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => setDarkMode((prev) => (prev === "dark" ? "light" : "dark"))}
+            onClick={handleDarkMode}
             className="p-2 rounded-full hover:bg-light-gray-background"
           >
             {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
