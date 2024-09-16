@@ -38,7 +38,7 @@ export default function Portfolio() {
       variants={containerVariants}
       className={`${darkMode} min-h-screen bg-background text-font-color`}
     >
-      <header className={`sticky top-0 bg-gray-background text-white shadow-lg`}>
+      <header className={`sticky z-10 top-0 bg-gray-background text-white shadow-lg`}>
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <nav>
