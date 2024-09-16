@@ -1,5 +1,6 @@
-import { Code, Gamepad, Monitor } from "lucide-react";
+import { Code, User, Briefcase, Mail, Cpu, Gamepad, Monitor } from "lucide-react";
 import { Experience, Project } from "./types";
+//import { LockIcon, Briefcase, Code, Mail, Cpu, Menu, Moon, Sun } from "lucide-react";
 
 export const containerVariants = {
   hidden: { opacity: 0 },
@@ -15,7 +16,15 @@ export const modalVariants = {
   exit: { opacity: 0, scale: 0.8, transition: { duration: 0.3 } },
 };
 
-export const headerMenu = ["About", "Projects", "Experience", "Education", "Skills"];
+export const headerMenu2 = ["About", "Projects", "Experience", "Education", "Skills"];
+export const headerMenu = [
+  { text: "About", icon: User },
+  { text: "Projects", icon: Code },
+  { text: "Experience", icon: Briefcase },
+  { text: "Education", icon: User },
+  { text: "Skills", icon: Cpu },
+  { text: "Contact", icon: Mail },
+];
 
 export const skills = [
   "React",

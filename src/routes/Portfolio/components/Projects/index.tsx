@@ -5,7 +5,7 @@ import { itemVariants, projects } from "../../utils";
 
 export default function Projects({ darkMode, selectProject }: { darkMode: boolean; selectProject: (project: Project) => void }) {
   return (
-    <motion.section id="projects" variants={itemVariants} className="mb-12">
+    <motion.section id="Projects" variants={itemVariants} className="mb-12">
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Projects
       </motion.h3>

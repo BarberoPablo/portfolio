@@ -3,7 +3,7 @@ import { itemVariants } from "../../utils";
 
 export default function Education({ darkMode }: { darkMode: boolean }) {
   return (
-    <motion.section id="education" variants={itemVariants} className="mb-12">
+    <motion.section id="Education" variants={itemVariants} className="mb-12">
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Education
       </motion.h3>

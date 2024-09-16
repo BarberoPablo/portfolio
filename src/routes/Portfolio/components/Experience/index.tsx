@@ -4,7 +4,7 @@ import { Globe } from "lucide-react";
 
 export default function Experience({ darkMode }: { darkMode: boolean }) {
   return (
-    <motion.section id="experience" variants={itemVariants} className="mb-12">
+    <motion.section id="Experience" variants={itemVariants} className="mb-12">
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Professional Experience
       </motion.h3>

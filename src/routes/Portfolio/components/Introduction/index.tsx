@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { itemVariants } from "../../utils";
 import { Gamepad, Github, Heart, Linkedin, Mail, ShoppingCart } from "lucide-react";
+//import { LockIcon, User, Briefcase, Code, Mail, Cpu, Menu, Moon, Sun } from "lucide-react";
 
 export default function Introduction() {
   return (
-    <motion.section id="about" variants={itemVariants} className="mb-12 flex flex-col md:flex-row items-center">
+    <motion.section id="About" variants={itemVariants} className="mb-12 flex flex-col md:flex-row items-center">
       <motion.img
         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile%20image-saBrGBiM3zYiNZwxPBFCzlJix5ienE.png"
         alt="Pablo Barbero"
