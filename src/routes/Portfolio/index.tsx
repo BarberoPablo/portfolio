@@ -5,14 +5,13 @@ import Experience from "./components/Experience";
 import Introduction from "./components/Introduction";
 import ProjectModal from "./components/ProjectModal";
 import Projects from "./components/Projects";
-import ProjectColumns from "./components/Projects2";
 import Skills from "./components/Skills";
 import { Project } from "./types";
 import { containerVariants, headerMenu, itemVariants } from "./utils";
 import Education from "./components/Education";
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState("dark");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,9 +20,9 @@ export default function Portfolio() {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}
+      className={`${darkMode} min-h-screen bg-background text-font-color`}
     >
-      <header className={`sticky top-0 bg-gray-800 text-white shadow-lg`}>
+      <header className={`sticky top-0 bg-gray-background text-white shadow-lg`}>
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <nav>
@@ -51,8 +50,8 @@ export default function Portfolio() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full hover:bg-gray-700"
+            onClick={() => setDarkMode((prev) => (prev === "dark" ? "light" : "dark"))}
+            className="p-2 rounded-full hover:bg-light-gray-background"
           >
             {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
           </motion.button>
@@ -78,18 +77,18 @@ export default function Portfolio() {
       <main className="container mx-auto px-4 py-8">
         <Introduction />
 
-        <Projects darkMode={darkMode} selectProject={setSelectedProject} />
+        <Projects selectProject={setSelectedProject} />
 
-        <Experience darkMode={darkMode} />
+        <Experience />
 
-        <Education darkMode={darkMode} />
+        <Education />
 
-        <Skills darkMode={darkMode} />
+        <Skills />
       </main>
 
-      <ProjectModal darkMode={darkMode} selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
+      <ProjectModal selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
 
-      <motion.footer variants={itemVariants} className={`mt-12 py-4 text-center ${darkMode ? "bg-gray-800" : "bg-gray-200"}`}>
+      <motion.footer variants={itemVariants} className={`mt-12 py-4 text-center bg-footer-background `}>
         <p>© 2024 Pablo Barbero. All rights reserved.</p>
       </motion.footer>
     </motion.div>

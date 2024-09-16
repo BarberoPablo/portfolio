@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { itemVariants } from "../../utils";
 
-export default function Education({ darkMode }: { darkMode: boolean }) {
+export default function Education() {
   return (
     <motion.section id="Education" variants={itemVariants} className="mb-12">
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Education
       </motion.h3>
-      <motion.div variants={itemVariants} className={`p-6 rounded-lg shadow-lg ${darkMode ? "bg-gray-800" : "bg-white"}`}>
+      <motion.div variants={itemVariants} className={"p-6 rounded-lg shadow-lg bg-secondary-background"}>
         <h4 className="text-xl font-bold mb-2">Ingeniería en sistemas de la información</h4>
         <p className="text-lg mb-2">Universidad Nacional del Sur</p>
         <p className="text-sm mb-4">March 2015 - December 2020</p>
@@ -19,7 +19,7 @@ export default function Education({ darkMode }: { darkMode: boolean }) {
         </p>
       </motion.div>
 
-      <motion.div variants={itemVariants} className={`p-6 mt-6 rounded-lg shadow-lg ${darkMode ? "bg-gray-800" : "bg-white"}`}>
+      <motion.div variants={itemVariants} className={"p-6 mt-6 rounded-lg shadow-lg bg-secondary-background"}>
         <h4 className="text-xl font-bold mb-2">Self-Taught Developer & Journey to Frontend</h4>
         <p className="text-lg mb-4">
           Alongside my university studies, I embarked on a self-taught journey, diving into various online courses and resources. I started

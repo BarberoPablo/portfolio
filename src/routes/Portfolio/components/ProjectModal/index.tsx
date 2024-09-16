@@ -5,11 +5,9 @@ import { Github, Globe, X } from "lucide-react";
 import { Project } from "../../types";
 
 export default function ProjectModal({
-  darkMode,
   selectedProject,
   setSelectedProject,
 }: {
-  darkMode: boolean;
   selectedProject: Project | null;
   setSelectedProject: React.Dispatch<React.SetStateAction<Project | null>>;
 }) {
@@ -25,9 +23,7 @@ export default function ProjectModal({
           onClick={() => setSelectedProject(null)}
         >
           <motion.div
-            className={`bg-white dark:bg-gray-800 p-6 rounded-lg max-w-2xl max-h-[80vh] overflow-y-auto ${
-              darkMode ? "text-white" : "text-gray-900"
-            }`}
+            className={`bg-white dark:bg-gray-800 p-6 rounded-lg max-w-2xl max-h-[80vh] overflow-y-auto text-font-color`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center mb-4">

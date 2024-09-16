@@ -2,18 +2,14 @@ import { motion } from "framer-motion";
 import { experiences, itemVariants } from "../../utils";
 import { Globe } from "lucide-react";
 
-export default function Experience({ darkMode }: { darkMode: boolean }) {
+export default function Experience() {
   return (
     <motion.section id="Experience" variants={itemVariants} className="mb-12">
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Professional Experience
       </motion.h3>
       {experiences.map((exp, index) => (
-        <motion.div
-          key={index}
-          variants={itemVariants}
-          className={`mb-6 p-6 rounded-lg shadow-lg ${darkMode ? "bg-gray-800" : "bg-white"}`}
-        >
+        <motion.div key={index} variants={itemVariants} className={"mb-6 p-6 rounded-lg shadow-lg bg-secondary-background"}>
           <div className="flex items-center mb-2 gap-2">
             <h4 className="text-xl font-bold">{exp.title}</h4>
             <motion.a
@@ -21,7 +17,7 @@ export default function Experience({ darkMode }: { darkMode: boolean }) {
               href={exp.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-yellow-500"
+              className="hover:text-icon-hover"
             >
               <Globe className="w-5 h-5" />
             </motion.a>

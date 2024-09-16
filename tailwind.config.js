@@ -5,25 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#1a202c",
-          light: "#2d3748",
-          dark: "#171923",
-        },
-        secondary: {
-          DEFAULT: "#3182ce",
-          light: "#4299e1",
-          dark: "#2c5282",
-        },
-        background: {
-          DEFAULT: "#f7fafc",
-          dark: "#1a202c",
-        },
-        text: {
-          DEFAULT: "#2d3748",
-          light: "#4a5568",
-          dark: "#e2e8f0",
-        },
+        background: "rgba(var(--background))",
+        "font-color": "rgba(var(--font-color))",
+        "gray-background": "rgba(var(--gray-background))",
+        "light-gray-background": "rgba(var(--light-gray-background))",
+        "footer-background": "rgba(var(--footer-background))",
+        "secondary-background": "rgba(var(--secondary-background))",
+        "icon-hover": "rgba(var(--icon-hover))",
+        "chip-background": "rgba(var(--chip-background))",
       },
     },
   },

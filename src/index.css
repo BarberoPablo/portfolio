@@ -5,3 +5,33 @@
 html {
   scroll-behavior: smooth;
 }
+
+.dark {
+  /* grey-900 */
+  --background: 17 24 39;
+  /* grey-800 */
+  --secondary-background: 31 41 55;
+  --font-color: 255 255 255;
+  /* grey-800 same for all */
+  --gray-background: 31 41 55;
+  /* grey-700 same for all */
+  --light-gray-background: 55 65 81;
+  --footer-background: 31 41 55;
+  --icon-hover: 234 179 8;
+  --chip-background: 161 98 7;
+}
+
+.light {
+  /*grey-100 */
+  --background: 243 244 246;
+  /* white */
+  --secondary-background: 255 255 255;
+  --font-color: 17 24 39;
+  /* grey-800 same for all */
+  --gray-background: 31 41 55;
+  /* grey-700 same for all */
+  --light-gray-background: 55 65 81;
+  --footer-background: 229 231 235;
+  --icon-hover: 234 179 8;
+  --chip-background: 254 240 138
+}

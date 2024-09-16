@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants, skills } from "../../utils";
 
-export default function Skills({ darkMode }: { darkMode: boolean }) {
+export default function Skills() {
   return (
     <motion.section id="Skills" variants={itemVariants}>
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
@@ -13,7 +13,7 @@ export default function Skills({ darkMode }: { darkMode: boolean }) {
             key={index}
             variants={itemVariants}
             whileHover={{ scale: 1.1 }}
-            className={`px-3 py-1 rounded-full ${darkMode ? "bg-yellow-700" : "bg-yellow-200 text-yellow-900"}`}
+            className={`px-3 py-1 rounded-full bg-chip-background`}
           >
             {skill}
           </motion.span>

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { itemVariants } from "../../utils";
 import { Gamepad, Github, Heart, Linkedin, Mail, ShoppingCart } from "lucide-react";
-//import { LockIcon, User, Briefcase, Code, Mail, Cpu, Menu, Moon, Sun } from "lucide-react";
 
 export default function Introduction() {
   return (
@@ -43,7 +42,7 @@ export default function Introduction() {
             href="https://github.com/BarberoPablo"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-500"
+            className="hover:text-icon-hover" //text is what the css prop that I want to change and icon-hover is the color from tailwind config
           >
             <Github className="w-6 h-6" />
           </motion.a>
@@ -52,11 +51,11 @@ export default function Introduction() {
             href="https://www.linkedin.com/in/barberopablo/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-500"
+            className="hover:text-icon-hover"
           >
             <Linkedin className="w-6 h-6" />
           </motion.a>
-          <motion.a whileHover={{ scale: 1.2 }} href="mailto:pablobarbero220@gmail.com" className="hover:text-yellow-500">
+          <motion.a whileHover={{ scale: 1.2 }} href="mailto:pablobarbero220@gmail.com" className="hover:text-icon-hover">
             <Mail className="w-6 h-6" />
           </motion.a>
         </motion.div>

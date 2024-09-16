@@ -3,7 +3,7 @@ import { Github, Globe, Info } from "lucide-react";
 import { Project } from "../../types";
 import { itemVariants, projects } from "../../utils";
 
-export default function Projects({ darkMode, selectProject }: { darkMode: boolean; selectProject: (project: Project) => void }) {
+export default function Projects({ selectProject }: { selectProject: (project: Project) => void }) {
   return (
     <motion.section id="Projects" variants={itemVariants} className="mb-12">
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
@@ -15,7 +15,7 @@ export default function Projects({ darkMode, selectProject }: { darkMode: boolea
             key={index}
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
-            className={`p-6 rounded-lg shadow-lg ${darkMode ? "bg-gray-800" : "bg-white"}`}
+            className={`p-6 rounded-lg shadow-lg bg-secondary-background`}
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center">
@@ -23,7 +23,7 @@ export default function Projects({ darkMode, selectProject }: { darkMode: boolea
                 <h4 className="text-xl font-bold ml-2">{project.name}</h4>
               </div>
               <div className="flex space-x-2">
-                <motion.button whileHover={{ scale: 1.2 }} onClick={() => selectProject(project)} className="hover:text-yellow-500">
+                <motion.button whileHover={{ scale: 1.2 }} onClick={() => selectProject(project)} className="hover:text-icon-hover">
                   <Info className="w-5 h-5" />
                 </motion.button>
                 <motion.a
@@ -31,7 +31,7 @@ export default function Projects({ darkMode, selectProject }: { darkMode: boolea
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-yellow-500"
+                  className="hover:text-icon-hover"
                 >
                   <Github className="w-5 h-5" />
                 </motion.a>
@@ -40,7 +40,7 @@ export default function Projects({ darkMode, selectProject }: { darkMode: boolea
                   href={project.deployedUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-yellow-500"
+                  className="hover:text-icon-hover"
                 >
                   <Globe className="w-5 h-5" />
                 </motion.a>
