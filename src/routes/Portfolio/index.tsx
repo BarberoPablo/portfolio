@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import Contact from "./components/Contact";
+import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Introduction from "./components/Introduction";
 import ProjectModal from "./components/ProjectModal";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { Project } from "./types";
-import { containerVariants, headerMenu, itemVariants } from "./utils";
-import Education from "./components/Education";
+import { containerVariants, headerMenu } from "./utils";
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") || "dark");
@@ -104,9 +105,9 @@ export default function Portfolio() {
 
       <ProjectModal selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
 
-      <motion.footer variants={itemVariants} className={`mt-12 py-4 text-center bg-footer-background `}>
-        <p>© 2024 Pablo Barbero. All rights reserved.</p>
-      </motion.footer>
+      <footer id="Contact" className={`flex flex-col content-center items-center mt-12 py-4 bg-footer-background`}>
+        <Contact />© 2024 Pablo Barbero. All rights reserved.
+      </footer>
     </motion.div>
   );
 }

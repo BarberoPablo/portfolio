@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { itemVariants } from "../../utils";
-import { Gamepad, Github, Heart, Linkedin, Mail, ShoppingCart } from "lucide-react";
+import Contact from "../Contact";
 
 export default function Introduction() {
   return (
@@ -25,39 +25,9 @@ export default function Introduction() {
           critical areas on bone scans. My love for video games drives my creativity, allowing me to build intuitive and interactive user
           experiences.
         </motion.p>
-        <motion.div variants={itemVariants} className="flex space-x-4 mb-4">
-          <span className="flex items-center">
-            <ShoppingCart className="w-5 h-5 mr-2" /> E-commerce
-          </span>
-          <span className="flex items-center">
-            <Heart className="w-5 h-5 mr-2" /> Healthcare
-          </span>
-          <span className="flex items-center">
-            <Gamepad className="w-5 h-5 mr-2" /> Gaming
-          </span>
-        </motion.div>
+
         <motion.div variants={itemVariants} className="flex space-x-4">
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            href="https://github.com/BarberoPablo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-icon-hover" //text is what the css prop that I want to change and icon-hover is the color from tailwind config
-          >
-            <Github className="w-6 h-6" />
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            href="https://www.linkedin.com/in/barberopablo/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-icon-hover"
-          >
-            <Linkedin className="w-6 h-6" />
-          </motion.a>
-          <motion.a whileHover={{ scale: 1.2 }} href="mailto:pablobarbero220@gmail.com" className="hover:text-icon-hover">
-            <Mail className="w-6 h-6" />
-          </motion.a>
+          <Contact />
         </motion.div>
       </div>
     </motion.section>
