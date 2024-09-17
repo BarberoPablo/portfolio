@@ -86,12 +86,22 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     name: "Tarkov Analyzer",
-    description: "A tool for analyzing game data",
+    description: "Videogame: Escape From Tarkov, inventory items detector",
     icon: <Monitor className="w-6 h-6" />,
     githubUrl: "https://github.com/BarberoPablo/tarkov-analyzer",
     deployedUrl: "https://barberopablo.github.io/tarkov-analyzer/",
-    details:
-      "Tarkov Analyzer is a comprehensive tool designed to help players of Escape from Tarkov optimize their gameplay. I decided to create this project because I noticed a lack of user-friendly analytics tools for this complex game. The application uses React for the frontend and Node.js for the backend, processing large amounts of game data to provide actionable insights. It works by aggregating data from various in-game sources and presenting it in an easy-to-understand format, allowing players to make informed decisions about loadouts, map routes, and economic strategies.",
+    details: (
+      <>
+        <>
+          Escape From Tarkov Inventory Item Detector is a web application I built to solve a time-consuming problem I faced while playing
+          Escape From Tarkov: <b>manually searching for the value of each item</b> in my inventory. The app allows users to paste
+          screenshots of their in-game inventory, automatically <b>detecting and displaying the market prices</b> of all items. It uses
+          image recognition and <b>Optical Character Recognition (OCR) technology</b> to analyze the image, identify items, and pull their
+          prices from the Flea Market. With multiple scan levels for efficiency, the app <b>speeds up the process</b> by merging scan
+          results and filtering redundant data, helping users <b>save time</b> when managing large inventories.
+        </>
+      </>
+    ),
   },
   {
     name: "Online Tetris",

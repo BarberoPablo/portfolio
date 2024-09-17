@@ -4,7 +4,7 @@ export type Project = {
   icon: React.ReactNode;
   githubUrl: string;
   deployedUrl: string;
-  details: string;
+  details: React.ReactNode;
 };
 
 export type Experience = {
