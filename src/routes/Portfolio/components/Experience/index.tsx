@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { experiences, itemVariants } from "../../utils";
 import { Globe } from "lucide-react";
+import { itemVariants } from "../../utils";
+import { experiences } from "./utils";
 
 export default function Experience() {
   return (

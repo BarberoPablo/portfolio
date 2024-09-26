@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Github, Globe, Info } from "lucide-react";
 import { Project } from "../../types";
-import { itemVariants, projects } from "../../utils";
+import { itemVariants } from "../../utils";
+import { projects } from "./utils";
 
 export default function Projects({ selectProject }: { selectProject: (project: Project) => void }) {
   return (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { containerVariants, itemVariants, skills } from "../../utils";
+import { containerVariants, itemVariants } from "../../utils";
+import { skills } from "./utils";
 
 export default function Skills() {
   return (
