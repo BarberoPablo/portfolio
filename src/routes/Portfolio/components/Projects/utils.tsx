@@ -1,5 +1,5 @@
 import { Gamepad, Monitor, Stethoscope } from "lucide-react";
-import Formula1Icon from "../../../../../public/formula1Icon.png";
+import Formula1Icon from "../../../../images/formula1Icon.png";
 import { Project } from "../../types";
 
 export const featuredProject = {

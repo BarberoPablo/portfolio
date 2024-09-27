@@ -47,7 +47,7 @@ export default function FeaturedProject() {
             <motion.img
               key={currentImageIndex}
               src={featuredProject.backgroundImages[currentImageIndex]}
-              alt={`${name} screenshot ${currentImageIndex + 1}`}
+              alt={`background image ${currentImageIndex + 1}`}
               className="rounded-md z-10 w-full h-full object-cover"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -55,25 +55,24 @@ export default function FeaturedProject() {
               transition={{ duration: 0.5 }}
             />
             <motion.img
-              key={"phone" + currentImageIndex}
+              key={featuredProject.phoneImages[currentImageIndex]}
               src={featuredProject.phoneImages[currentImageIndex]}
               alt={`phone image ${currentImageIndex + 1}`}
-              className="hidden sm:flex absolute -top-[50px] right-0 z-40 rounded-md w-[270px] h-full object-contain"
+              className="hidden sm:flex absolute -top-[50px] right-0 z-20 rounded-md w-[270px] h-full object-contain"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              loading="lazy"
             />
           </AnimatePresence>
           <button
-            className="absolute left-2 top-1/2 z-50 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-colors"
+            className="absolute left-2 top-1/2 z-30 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-colors"
             onClick={prevImage}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
-            className="absolute right-2 top-1/2 z-50 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-colors"
+            className="absolute right-2 top-1/2 z-30 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-colors"
             onClick={nextImage}
           >
             <ChevronRight className="h-6 w-6" />
