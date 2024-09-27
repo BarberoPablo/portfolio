@@ -2,11 +2,16 @@ import { motion } from "framer-motion";
 import { Github, Globe, Info } from "lucide-react";
 import { Project } from "../../types";
 import { itemVariants } from "../../utils";
+import FeaturedProject from "./FeaturedProject";
 import { projects } from "./utils";
 
 export default function Projects({ selectProject }: { selectProject: (project: Project) => void }) {
   return (
     <motion.section id="Projects" variants={itemVariants} className="mb-12">
+      <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
+        Featured Project
+      </motion.h3>
+      <FeaturedProject />
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Projects
       </motion.h3>

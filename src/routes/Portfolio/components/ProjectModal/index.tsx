@@ -1,8 +1,8 @@
-import { motion, AnimatePresence } from "framer-motion";
-import React from "react";
-import { modalVariants } from "../../utils";
+import { AnimatePresence, motion } from "framer-motion";
 import { Github, Globe, X } from "lucide-react";
+import React from "react";
 import { Project } from "../../types";
+import { modalVariants } from "../../utils";
 
 export default function ProjectModal({
   selectedProject,
@@ -23,14 +23,20 @@ export default function ProjectModal({
           onClick={() => setSelectedProject(null)}
         >
           <motion.div
-            className={`bg-white dark:bg-gray-800 p-6 rounded-lg max-w-2xl max-h-[80vh] overflow-y-auto text-font-color`}
+            className={`bg-white dark:bg-gray-800 p-4 rounded-lg max-w-3xl max-h-[80vh] mt-[64px] lg:mt-[72px] overflow-y-auto text-font-color`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-2xl font-bold">{selectedProject.name}</h3>
+            <div className="flex justify-end">
               <button onClick={() => setSelectedProject(null)}>
                 <X className="w-6 h-6" />
               </button>
+            </div>
+            <div className="flex justify-center">
+              <h3 className="text-xl font-bold">Motivation:</h3>
+            </div>
+            <p className="mb-4">{selectedProject.motivation}</p>
+            <div className="flex justify-center">
+              <h3 className="text-xl font-bold">Project details:</h3>
             </div>
             <p className="mb-4">{selectedProject.details}</p>
             <div className="flex space-x-4">

@@ -4,6 +4,7 @@ export type Project = {
   icon: React.ReactNode;
   githubUrl: string;
   deployedUrl: string;
+  motivation?: React.ReactNode;
   details: React.ReactNode;
 };
 

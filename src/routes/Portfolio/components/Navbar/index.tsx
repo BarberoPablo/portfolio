@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { headerMenu } from "../../utils";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useState } from "react";
+import { headerMenu } from "../../utils";
 
 export default function Navbar({ toggleDarkMode }: { toggleDarkMode: () => void }) {
   const darkMode = localStorage.getItem("theme") || "dark";
@@ -9,7 +9,7 @@ export default function Navbar({ toggleDarkMode }: { toggleDarkMode: () => void 
 
   return (
     <header className={`sticky top-0 z-50 bg-gray-background text-white shadow-lg`}>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <nav>
             <ul className="hidden md:flex space-x-4">
