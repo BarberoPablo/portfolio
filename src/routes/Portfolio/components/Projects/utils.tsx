@@ -28,8 +28,8 @@ export const featuredProject = {
     <>Podium, race results and lap times.</>,
     <>Cool facts and animations about the sport.</>,
   ],
-  githubUrl: "https://github.com/yourusername/amazing-portfolio",
-  deployedUrl: "https://amazing-portfolio.vercel.app",
+  githubUrl: "https://github.com/BarberoPablo/formula1-calendar",
+  deployedUrl: "http://formula1-calendar.vercel.app/",
   techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "API"],
 };
 
