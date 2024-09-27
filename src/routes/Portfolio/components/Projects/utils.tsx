@@ -22,6 +22,12 @@ export const featuredProject = {
     "https://i.ibb.co/mNyRHWy/WRpodium-left.webp",
     "https://i.ibb.co/dJJyHCj/WRDRS-portrait.webp",
   ],
+  imagesDescription: [
+    <>Calendar and real-time countdown to the next race.</>,
+    <>Circuit and race information.</>,
+    <>Podium, race results and lap times.</>,
+    <>Cool facts and animations about the sport.</>,
+  ],
   githubUrl: "https://github.com/yourusername/amazing-portfolio",
   deployedUrl: "https://amazing-portfolio.vercel.app",
   techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "API"],

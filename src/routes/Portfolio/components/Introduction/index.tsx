@@ -21,9 +21,9 @@ export default function Introduction() {
           Frontend Developer Dedicated to Building Meaningful and Efficient Applications
         </motion.p>
         <motion.p variants={itemVariants} className="mb-4">
-          My work spans e-commerce platforms and healthcare, where I developed an application that lets surgeons annotate and highlight
-          critical areas on bone scans. My love for video games drives my creativity, allowing me to build intuitive and interactive user
-          experiences.
+          Being part of a company in which I can acquire new knowledge, show my skills, having the opportunity to achieve my goals to grow
+          in the personal, intelectual and work area. I have strong programming bases that makes me an ideal candidate for companies that
+          are looking for an enthusiastic, committed person who is willing to improve and contribute with his knowledge.
         </motion.p>
 
         <motion.div variants={itemVariants} className="flex space-x-4">

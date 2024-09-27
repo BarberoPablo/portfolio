@@ -5,7 +5,7 @@ import { experiences } from "./utils";
 
 export default function Experience() {
   return (
-    <motion.section id="Experience" variants={itemVariants} className="mb-12">
+    <motion.section id="Experience" variants={itemVariants} className="my-12">
       <motion.h3 variants={itemVariants} className="text-3xl font-bold mb-6">
         Professional Experience
       </motion.h3>

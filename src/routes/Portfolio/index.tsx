@@ -7,6 +7,7 @@ import Introduction from "./components/Introduction";
 import Navbar from "./components/Navbar";
 import ProjectModal from "./components/ProjectModal";
 import Projects from "./components/Projects";
+import FeaturedProject from "./components/Projects/FeaturedProject";
 import Skills from "./components/Skills";
 import { Project } from "./types";
 import { containerVariants } from "./utils";
@@ -44,6 +45,8 @@ export default function Portfolio() {
         <Introduction />
 
         <Projects selectProject={setSelectedProject} />
+
+        <FeaturedProject />
 
         <Experience />
 

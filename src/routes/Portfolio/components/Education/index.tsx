@@ -15,7 +15,7 @@ export default function Education() {
           I've studied Engineering in Information Systems for five years. While studying, I had many subjects oriented to mathematics, which
           I really enjoyed and was able to pass, and just a few subjects oriented to programming, which I fell in love with. Then I realized
           that programming was what I wanted for my future, it was exactly what I was looking for, so I started to dedicate my full time to
-          this world of coding and putting the university aside for now. These five years taught me a lot, I don't regret it at all.
+          this world of coding.
         </p>
       </motion.div>
 
